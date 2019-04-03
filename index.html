@@ -75,7 +75,7 @@
         align-items: center;
         height: 100%;
         background-color: forestgreen;
-        opacity: 0.5;
+        opacity: 0.8;
       }
       .apply-now-btn {
         width: 270px;
@@ -273,10 +273,82 @@
     <div id="apply" class="apply-now-container">
       <div class="apply-now">
         <div>
-          <button class="btn apply-now-btn">Apply Now</button>
+          <button
+            data-toggle="modal"
+            data-target="#applyModal"
+            class="btn apply-now-btn"
+          >
+            Apply Now
+          </button>
         </div>
       </div>
     </div>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="applyModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="applyModalTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="applyModalTitle">Apply Now</h2>
+          </div>
+          <div class="modal-body" style="text-align: left; padding: 25px;">
+            <form action="#">
+              <div class="form-group">
+                <label for="name" class="text-left">Name:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Enter name"
+                  name="name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email" class="text-left">Email:</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter email"
+                  name="email"
+                />
+              </div>
+              <div class="form-group">
+                <label for="mssg">Message:</label>
+                <textarea
+                  class="form-control rounded-0"
+                  placeholder="Your Message ..."
+                  rows="5"
+                  name="mssg"
+                ></textarea>
+              </div>
+              <!--
+          <div class="checkbox">
+            <label><input type="checkbox" name="remember" /> Remember me</label>
+          </div> -->
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </div>
+          <!--  <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+         </div> -->
+        </div>
+      </div>
+    </div>
+
     <div id="contact">
       <div class="container contact-container">
         <h2>Contact</h2>
