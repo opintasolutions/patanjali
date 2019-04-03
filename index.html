@@ -15,7 +15,7 @@
         margin: 0;
         padding: 0;
         text-align: center;
-        color: #333;
+        color: #1f2839;
         font-family: sans-serif;
         padding-top: 70px;
       }
@@ -36,7 +36,7 @@
         grid-template-columns: 230px auto;
       }
       #navlist {
-        background-color: #333;
+        background-color: #1f2839;
         color: white;
         padding: 5px;
         margin: 0;
@@ -103,6 +103,9 @@
         .product-grid img {
           padding: 10px;
         }
+        .product-grid {
+          margin: 0;
+        }
       }
       .about-text {
         text-align: left;
@@ -119,6 +122,27 @@
         .about-text {
           width: 550px;
         }
+        .contact-container {
+          width: 40vw;
+          padding: 15px 65px;
+        }
+      }
+      textarea {
+        resize: none;
+      }
+      #contact {
+        background-color: #1f2839;
+        padding: 40px;
+      }
+      .contact-container {
+        background: #eee;
+        text-align: left;
+        padding: 25px;
+        border-radius: 8px;
+      }
+      .footer-bar {
+        height: 30px;
+        background-color: coral;
       }
     </style>
   </head>
@@ -156,7 +180,7 @@
           <img
             class="img-responsive"
             src="1.jpg.png"
-            alt="Los Angeles"
+            alt="bg-1"
             style="width:100%;"
           />
         </div>
@@ -165,7 +189,7 @@
           <img
             class="img-responsive"
             src="2.jpg"
-            alt="Chicago"
+            alt="bg-2"
             style="width:100%;"
           />
         </div>
@@ -174,7 +198,7 @@
           <img
             class="img-responsive"
             src="3.jpg"
-            alt="New york"
+            alt="bg-3"
             style="width:100%;"
           />
         </div>
@@ -220,29 +244,82 @@
           </p>
         </div>
         <!-- *** Product Showcase *** -->
-        <div class="row product-grid">
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-            <img class="img-responsive" src="1ns.jpg" alt="product-1" />
+        <div style="margin-bottom: 15px;">
+          <div class="row product-grid">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <img class="img-responsive" src="1ns.jpg" alt="product-1" />
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <img class="img-responsive" src="2ns.jpg" alt="product-2" />
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <img class="img-responsive" src="3ns.jpg" alt="product-3" />
+            </div>
           </div>
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-            <img class="img-responsive" src="2ns.jpg" alt="product-2" />
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-            <img class="img-responsive" src="3ns.jpg" alt="product-3" />
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-            <img class="img-responsive" src="4ns.jpg" alt="product-4" />
+          <div class="row product-grid">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <img class="img-responsive" src="4ns.jpg" alt="product-1" />
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <img class="img-responsive" src="5ns.jpg" alt="product-2" />
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <img class="img-responsive" src="6ns.jpg" alt="product-3" />
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="apply-now-container">
+    <div id="apply" class="apply-now-container">
       <div class="apply-now">
         <div>
           <button class="btn apply-now-btn">Apply Now</button>
         </div>
       </div>
     </div>
-    <div style="height: 300px;"></div>
+    <div id="contact">
+      <div class="container contact-container">
+        <h2>Contact</h2>
+        <br />
+        <form action="#">
+          <div class="form-group">
+            <label for="name" class="text-left">Name:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Enter name"
+              name="name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email" class="text-left">Email:</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Enter email"
+              name="email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="mssg">Message:</label>
+            <textarea
+              class="form-control rounded-0"
+              placeholder="Your Message ..."
+              rows="5"
+              name="mssg"
+            ></textarea>
+          </div>
+          <!--
+          <div class="checkbox">
+            <label><input type="checkbox" name="remember" /> Remember me</label>
+          </div> -->
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bar"></div>
+    <script type="text/javascript"></script>
   </body>
 </html>
