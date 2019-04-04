@@ -8,156 +8,25 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
     />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        text-align: center;
-        color: #1f2839;
-        font-family: sans-serif;
-        padding-top: 70px;
-      }
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-      a:hover {
-        text-decoration: none;
-      }
-      nav {
-        background: white;
-        display: grid;
-        position: fixed;
-        width: 100%;
-        z-index: 2;
-        top: 0px;
-        grid-template-columns: 230px auto;
-      }
-      #navlist {
-        background-color: #1f2839;
-        color: white;
-        padding: 5px;
-        margin: 0;
-        text-align: center;
-        overflow: auto;
-        overflow-y: hidden;
-        white-space: nowrap;
-      }
-      #navlist li {
-        list-style: none;
-        display: inline;
-        width: 25px;
-        padding: 28px;
-        line-height: 3.4;
-        font-size: 18px;
-        margin: 0 19px;
-      }
-      #navlist li:hover {
-        background: white;
-        color: #222;
-      }
-      .product-grid {
-        margin: 30px 0 30px 0;
-      }
-      .apply-now-container {
-        width: 100%;
-        background-image: url('cover1.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        height: 250px;
-      }
-      .apply-now {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        background-color: forestgreen;
-        opacity: 0.8;
-      }
-      .apply-now-btn {
-        width: 270px;
-        padding: 20px;
-        opacity: 1;
-        font-size: 28px;
-      }
-      @media screen and (max-width: 420px) {
-        body {
-          padding-top: 122px;
-        }
-        nav {
-          display: block;
-          text-align: center;
-          padding: 0;
-        }
-        #navlist {
-          padding: 0;
-        }
-        #navlist li {
-          margin: 0;
-          padding: 20px;
-          font-size: 16px;
-        }
-        .product-grid img {
-          padding: 10px;
-        }
-        .product-grid {
-          margin: 0;
-        }
-      }
-      .about-text {
-        text-align: left;
-        font-size: 17px;
-        padding: 18px;
-        line-height: 1.8;
-      }
-      @media screen and (min-width: 783px) {
-        .about-container {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-        .about-text {
-          width: 550px;
-        }
-        .contact-container {
-          width: 40vw;
-          padding: 15px 65px;
-        }
-      }
-      textarea {
-        resize: none;
-      }
-      #contact {
-        background-color: #1f2839;
-        padding: 40px;
-      }
-      .contact-container {
-        background: #eee;
-        text-align: left;
-        padding: 25px;
-        border-radius: 8px;
-      }
-      .footer-bar {
-        height: 30px;
-        background-color: coral;
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Patanjali Distributors</title>
   </head>
   <body>
     <!-- navbar -->
     <nav>
-      <a href="index.html"><img id="logo" src="logo.png" /> </a>
+      <a href="index.html"><img id="logo" src="img/logo.png" /> </a>
       <ul id="navlist">
-        <a href="#"
-          ><b><li class="active">Home</li></b></a
+        <a href="#" class="active"
+          ><b><li>Home</li></b></a
         >
         <a href="#about"
-          ><b><li>About Us</li></b></a
+          ><b><li>About</li></b></a
         >
-        <a href="#apply"
+        <a href="#apply-here"
           ><b><li>Apply Now</li></b></a
         >
         <a href="#contact"
@@ -179,7 +48,7 @@
         <div class="item active">
           <img
             class="img-responsive"
-            src="1.jpg.png"
+            src="img/1.jpg.png"
             alt="bg-1"
             style="width:100%;"
           />
@@ -188,7 +57,7 @@
         <div class="item">
           <img
             class="img-responsive"
-            src="2.jpg"
+            src="img/2.jpg"
             alt="bg-2"
             style="width:100%;"
           />
@@ -197,7 +66,7 @@
         <div class="item">
           <img
             class="img-responsive"
-            src="3.jpg"
+            src="img/3.jpg"
             alt="bg-3"
             style="width:100%;"
           />
@@ -216,11 +85,15 @@
     </div>
     <!-- ***** ABOUT US ****** -->
     <div class="container">
-      <div id="about">
+      <div id="about" class="section" style="padding-top: 60px;">
         <h2>About Us</h2>
         <div class="about-container">
           <div class="about-img">
-            <img class="img-responsive" src="about.png" alt="about patanjali" />
+            <img
+              class="img-responsive"
+              src="img/about.png"
+              alt="about patanjali"
+            />
           </div>
           <p class="about-text">
             Patanjali is an Indian consumer goods company. Manufacturing units
@@ -247,29 +120,30 @@
         <div style="margin-bottom: 15px;">
           <div class="row product-grid">
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-              <img class="img-responsive" src="1ns.jpg" alt="product-1" />
+              <img class="img-responsive" src="img/1ns.jpg" alt="product-1" />
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-              <img class="img-responsive" src="2ns.jpg" alt="product-2" />
+              <img class="img-responsive" src="img/2ns.jpg" alt="product-2" />
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-              <img class="img-responsive" src="3ns.jpg" alt="product-3" />
+              <img class="img-responsive" src="img/3ns.jpg" alt="product-3" />
             </div>
           </div>
           <div class="row product-grid">
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-              <img class="img-responsive" src="4ns.jpg" alt="product-1" />
+              <img class="img-responsive" src="img/4ns.jpg" alt="product-1" />
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-              <img class="img-responsive" src="5ns.jpg" alt="product-2" />
+              <img class="img-responsive" src="img/5ns.jpg" alt="product-2" />
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-              <img class="img-responsive" src="6ns.jpg" alt="product-3" />
+              <img class="img-responsive" src="img/6ns.jpg" alt="product-3" />
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div id="apply-here" class="section"></div>
     <div id="apply" class="apply-now-container">
       <div class="apply-now">
         <div>
@@ -298,15 +172,26 @@
             <h2 class="modal-title" id="applyModalTitle">Apply Now</h2>
           </div>
           <div class="modal-body" style="text-align: left; padding: 25px;">
-            <form action="#">
+            <form class="apply-form" action="#">
               <div class="form-group">
                 <label for="name" class="text-left">Name:</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="name"
+                  id="apply-name"
                   placeholder="Enter name"
                   name="name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="mobile" class="text-left">Moblie:</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="apply-mobile"
+                  placeholder="Enter Mobile Number"
+                  name="mobile"
+                  min="0"
                 />
               </div>
               <div class="form-group">
@@ -320,40 +205,103 @@
                 />
               </div>
               <div class="form-group">
-                <label for="mssg">Message:</label>
+                <label for="address">Address:</label>
                 <textarea
-                  class="form-control rounded-0"
-                  placeholder="Your Message ..."
+                  class="form-control"
+                  id="apply-address"
+                  placeholder="Your Address ..."
                   rows="5"
-                  name="mssg"
+                  name="address"
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <label for="pincode" class="text-left">Pincode:</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="apply-pincode"
+                  placeholder="Enter Pincode"
+                  name="pincode"
+                />
+              </div>
+              <div class="form-group">
+                <label for="apply-for" class="text-left">Apply For:</label>
+                <select
+                  class="form-control"
+                  id="apply-apply-for"
+                  name="apply-for"
+                >
+                  <option value="">--- Please Select ---</option>
+                  <option value="Dealership">Dealership</option>
+                  <option value="Distributorship">Distributorship</option>
+                  <option value="Mega Store">Mega Store</option>
+                  <option value="Retail Store">Retail Store</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="distributor-level" class="text-left"
+                  >Distributor Level:</label
+                >
+                <select
+                  class="form-control"
+                  id="apply-distributor-level"
+                  name="distributor-level"
+                >
+                  <option value="">--- Please Select ---</option>
+                  <option value="District Level">District Level</option>
+                  <option value="Mandi Level">Mandi Level</option>
+                  <option value="Tehsil Level">Tehsil Level</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="expected-investment" class="text-left"
+                  >Expected Investment:</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="apply-expected-investment"
+                  name="expected-investment"
+                />
+              </div>
+              <div class="form-group">
+                <label for="comment">Comment:</label>
+                <textarea
+                  class="form-control"
+                  id="apply-comment"
+                  placeholder="Your Comments ..."
+                  rows="5"
+                  name="comment"
                 ></textarea>
               </div>
               <!--
           <div class="checkbox">
             <label><input type="checkbox" name="remember" /> Remember me</label>
           </div> -->
-              <button type="submit" class="btn btn-default">Submit</button>
             </form>
           </div>
-          <!--  <div class="modal-footer">
+          <div class="modal-footer">
             <button
               type="button"
               class="btn btn-secondary"
               data-dismiss="modal"
             >
-              Close
+              Cancel
             </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-         </div> -->
+            <button type="submit" class="btn btn-success apply-form-button">
+              Submit
+            </button>
+          </div>
         </div>
       </div>
     </div>
 
-    <div id="contact">
+    <div id="contact" class="section">
+      <div style="padding-top: 120px;"></div>
       <div class="container contact-container">
-        <h2>Contact</h2>
+        <h2 class="text-center">Contact</h2>
         <br />
-        <form action="#">
+        <form id="contact-form" action="#">
           <div class="form-group">
             <label for="name" class="text-left">Name:</label>
             <input
@@ -387,11 +335,22 @@
           <div class="checkbox">
             <label><input type="checkbox" name="remember" /> Remember me</label>
           </div> -->
-          <button type="submit" class="btn btn-default">Submit</button>
+          <button class="btn btn-default contact-form-button">
+            Submit
+          </button>
         </form>
       </div>
     </div>
-    <div class="footer-bar"></div>
-    <script type="text/javascript"></script>
+    <div class="footer-bar">
+      <b>Copyrights &copy; 2019</b>
+      <div>
+        <i class="fa fa-facebook-square"></i>
+        <i class="fa fa-twitter-square"></i>
+        <i class="fa fa-envelope"></i>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
