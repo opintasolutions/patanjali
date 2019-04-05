@@ -130,6 +130,11 @@ nav {
   #apply-here {
     padding-top: 60px;
   }
+  .contact-flex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 }
 textarea {
   resize: none;
