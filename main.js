@@ -121,7 +121,7 @@ $('.apply-form-button').click(function(e) {
 
     const bodyEncoded = new URLSearchParams();
     bodyEncoded.append('from_email', email);
-    bodyEncoded.append('to_email', 'mail@opintasolutions.com');
+    bodyEncoded.append('to_email', 'apply@franchisebusiness.store');
     bodyEncoded.append('subject', 'application');
     bodyEncoded.append('content', body);
 
@@ -169,7 +169,7 @@ $('.contact-form-button').click(function(e) {
 
     const contactbodyEncoded = new URLSearchParams();
     contactbodyEncoded.append('from_email', contactEmail);
-    contactbodyEncoded.append('to_email', 'mail@opintasolutions.com');
+    contactbodyEncoded.append('to_email', 'apply@franchisebusiness.store');
     contactbodyEncoded.append('subject', 'message');
     contactbodyEncoded.append('content', contactBody);
 
