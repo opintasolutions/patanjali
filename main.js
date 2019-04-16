@@ -19,6 +19,9 @@ let expInvestment = '';
 let comment = '';
 console.log('inside ready');
 console.log($('.apply-form-button'));
+
+const distEmail = 'apply@franchisebusiness.store';
+
 $('.apply-form-button').click(function(e) {
   e.preventDefault();
   let serialApply = $('.apply-form').serializeArray();
@@ -119,9 +122,9 @@ $('.apply-form-button').click(function(e) {
       <p><b>Comments:</b><br /> ${comment}</p>
       </body></html>`;
 
-    const bodyEncoded = new URLSearchParams();
+    let bodyEncoded = new URLSearchParams();
     bodyEncoded.append('from_email', email);
-    bodyEncoded.append('to_email', 'apply@franchisebusiness.store');
+    bodyEncoded.append('to_email', distEmail);
     bodyEncoded.append('subject', 'application');
     bodyEncoded.append('content', body);
 
@@ -134,6 +137,28 @@ $('.apply-form-button').click(function(e) {
       success: res =>
         res.statusCode === 202
           ? alert('Application Sent, Thank You')
+          : alert('Something went wrong ! Please try again'),
+      error: err => console.log(err),
+    });
+
+    let responseBody = new URLSearchParams();
+    responseBody.append('from_email', distEmail);
+    responseBody.append('to_email', email);
+    responseBody.append('subject', 'thank you');
+    responseBody.append(
+      'content',
+      `Hey ${name}<br /><p>You applied for <b>${applyFor}</b> at <b>${distLevel}</b>.</p><p>Thank you for applying.</p>`,
+    );
+
+    $.ajax({
+      url:
+        'https://wt-4896982400a54bf82243b9417c45f1ea-0.sandbox.auth0-extend.com/sendgrid_Patanjali',
+      type: 'POST',
+      data: `${responseBody}`,
+      contentType: 'application/x-www-form-urlencoded',
+      success: res =>
+        res.statusCode === 202
+          ? alert('Please check your email, Thank You')
           : alert('Something went wrong ! Please try again'),
       error: err => console.log(err),
     });
@@ -167,9 +192,9 @@ $('.contact-form-button').click(function(e) {
 
     const contactBody = `<h2>Message</h2><b>Name: ${contactName}</b><br /><b>Email: ${contactEmail}</b><br /><p>${contactMssg}</p>`;
 
-    const contactbodyEncoded = new URLSearchParams();
+    let contactbodyEncoded = new URLSearchParams();
     contactbodyEncoded.append('from_email', contactEmail);
-    contactbodyEncoded.append('to_email', 'apply@franchisebusiness.store');
+    contactbodyEncoded.append('to_email', distEmail);
     contactbodyEncoded.append('subject', 'message');
     contactbodyEncoded.append('content', contactBody);
 
@@ -182,6 +207,28 @@ $('.contact-form-button').click(function(e) {
       success: res =>
         res.statusCode === 202
           ? alert('Message Sent, Thank You')
+          : alert('Something went wrong ! Please try again'),
+      error: err => console.log(err),
+    });
+
+    let resContactMssg = new URLSearchParams();
+    resContactMssg.append('from_email', distEmail);
+    resContactMssg.append('to_email', contactEmail);
+    resContactMssg.append('subject', 'thank you');
+    resContactMssg.append(
+      'content',
+      `Hey ${contactName}, <br /> Thank you for contacting us. We will reach out to you soon.`,
+    );
+
+    $.ajax({
+      url:
+        'https://wt-4896982400a54bf82243b9417c45f1ea-0.sandbox.auth0-extend.com/sendgrid_Patanjali',
+      type: 'POST',
+      data: `${resContactMssg}`,
+      contentType: 'application/x-www-form-urlencoded',
+      success: res =>
+        res.statusCode === 202
+          ? alert('Please check your email, Thank You')
           : alert('Something went wrong ! Please try again'),
       error: err => console.log(err),
     });
