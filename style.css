@@ -107,6 +107,9 @@ nav {
   #contact {
     padding: 200px 40px;
   }
+  .call-action {
+    padding: 20px 0 !important;
+  }
 }
 .about-text {
   text-align: left;
@@ -157,11 +160,16 @@ textarea {
   padding: 5px;
 }
 .footer-bar i {
-  font-size: 25px;
-  margin-right: 25px;
+  font-size: 23px;
+  margin-left: 13px;
 }
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+.call-action {
+  padding: 30px 0;
+  color: forestgreen;
+  background: rgba(255, 127, 80, 0.7);
 }
