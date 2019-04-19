@@ -45,15 +45,24 @@ $('.apply-form-button').click(function(e) {
             name = obj.value;
             break;
           case 'mobile':
+            if (obj.value.length !== 10) {
+              alert('Please Enter a 10 Digit Mobile Number');
+            }
             mobile = obj.value;
             break;
           case 'email':
+            if (obj.value.indexOf('@') === -1) {
+              alert('Please Enter Valid Email');
+            }
             email = obj.value;
             break;
           case 'address':
             address = obj.value;
             break;
           case 'pincode':
+            if (obj.value.length !== 6) {
+              alert('Please Enter valid Pincode');
+            }
             pincode = obj.value;
             break;
           case 'apply-for':
